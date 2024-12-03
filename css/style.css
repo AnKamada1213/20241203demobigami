@@ -200,11 +200,10 @@ PagetopとLINEボタン
 }
 
 /* 以下はline */
-
-#line a{
+#line a {
 	display: flex;
-	justify-content:center;
-	align-items:center;
+	justify-content: center;
+	align-items: center;
 	border-radius: 5px;
 	width: 160px;
 	height: 60px;
@@ -212,73 +211,74 @@ PagetopとLINEボタン
 	text-align: center;
 	text-transform: uppercase; 
 	text-decoration: none;
-	font-size:0.6rem;
-	transition:all 0.3s;
+	font-size: 0.6rem;
+	transition: all 0.3s; /* アニメーションのスムーズさ */
 }
 
-#line img{
-  width: 100%;
+#line img {
+	width: 100%;
 	height: 100%;
-  object-fit: contain;
-  overflow: hidden;
+	object-fit: contain;
+	overflow: hidden;
 }
 
-#line a:hover{
-	background: #777;
+#line a:hover {
+	transform: scale(1.1); /* ホバー時に少し大きくする */
 }
 
 #line {
 	position: fixed;
 	right: 30px;
-	bottom:0px;
+	bottom: 0px;
 	z-index: 2;
 	opacity: 0;
 	transform: translateY(100px);
 }
 
 /*　上に上がる動き　*/
-
-#line.UpMove{
+#line.UpMove {
 	animation: UpAnime 0.5s forwards;
 }
-@keyframes UpAnime{
-  from {
-    opacity: 0;
-	transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+
+@keyframes UpAnime {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 /*　下に下がる動き　*/
-
-#line.DownMove{
+#line.DownMove {
 	animation: DownAnime 0.5s forwards;
 }
-@keyframes DownAnime{
-  from {
-  	opacity: 1;
-	transform: translateY(0);
-  }
-  to {
-  	opacity: 1;
-	transform: translateY(100px);
-  }
+
+@keyframes DownAnime {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(100px);
+	}
 }
 
 #page-top.FadeOut, #line.FadeOut {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
 }
 
 /* 以下はInstagram */
+/* 以下はInstagram */
 
-#instagram a{
+#instagram a {
 	display: flex;
-	justify-content:center;
-	align-items:center;
+	justify-content: center;
+	align-items: center;
 	border-radius: 5px;
 	width: 160px;
 	height: 60px;
@@ -286,66 +286,69 @@ PagetopとLINEボタン
 	text-align: center;
 	text-transform: uppercase; 
 	text-decoration: none;
-	font-size:0.6rem;
-	transition:all 0.3s;
+	font-size: 0.6rem;
+	transition: all 0.3s;
 }
 
-#instagram img{
-  width: 100%;
+#instagram img {
+	width: 100%;
 	height: 100%;
-  object-fit: contain;
-  overflow: hidden;
+	object-fit: contain;
+	overflow: hidden;
 }
 
-#instagram a:hover{
-	background: #777;
+#instagram a:hover {
+	transform: scale(1.1); /* ホバー時に少し大きくする */
 }
 
 #instagram {
 	position: fixed;
 	right: 30px;
-	bottom:70px;
+	bottom: 70px;
 	z-index: 2;
 	opacity: 0;
 	transform: translateY(100px);
 }
 
-/*　上に上がる動き　*/
+/* 上に上がる動き */
 
-#instagram.UpMove{
+#instagram.UpMove {
 	animation: UpAnime 0.5s forwards;
 }
-@keyframes UpAnime{
-  from {
-    opacity: 0;
-	transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-	transform: translateY(0);
-  }
+
+@keyframes UpAnime {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-/*　下に下がる動き　*/
+/* 下に下がる動き */
 
-#instagram.DownMove{
+#instagram.DownMove {
 	animation: DownAnime 0.5s forwards;
 }
-@keyframes DownAnime{
-  from {
-  	opacity: 1;
-	transform: translateY(0);
-  }
-  to {
-  	opacity: 1;
-	transform: translateY(100px);
-  }
+
+@keyframes DownAnime {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(100px);
+	}
 }
 
 #page-top.FadeOut, #instagram.FadeOut {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
 }
+
 
 .Hidden {
   opacity: 0;
