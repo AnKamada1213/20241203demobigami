@@ -370,10 +370,6 @@ PagetopとLINEボタン
   margin-bottom: 24px;    
 }
 
-.message-list li{
-  font-size: 0.85rem;
-}
-
 .message-text {
   margin-top: 32px;
   padding: 20px;         
@@ -828,8 +824,11 @@ h3{
 -------------------------------------------*/
 
 .message-list {
-  font-size: 1.15rem;
   line-height: 1.6;          
+}
+
+.message-list li {
+  font-size: 0.85rem;
 }
 
 .red{
