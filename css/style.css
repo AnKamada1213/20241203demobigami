@@ -199,11 +199,23 @@ PagetopとLINEボタン
   }
 }
 
+#sns {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  display: flex;
+  padding: 16px 0 0;
+}
+
+#sns .flex {
+  display: flex;
+  gap: 10px;
+}
+
 /* 以下はline */
 #line a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: block;
 	border-radius: 5px;
 	width: 160px;
 	height: 60px;
@@ -273,12 +285,9 @@ PagetopとLINEボタン
 }
 
 /* 以下はInstagram */
-/* 以下はInstagram */
 
 #instagram a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: block;
 	border-radius: 5px;
 	width: 160px;
 	height: 60px;
@@ -348,7 +357,6 @@ PagetopとLINEボタン
 	opacity: 0;
 	transition: opacity 0.5s ease-out;
 }
-
 
 .Hidden {
   opacity: 0;
