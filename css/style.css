@@ -161,7 +161,7 @@ PagetopとLINEボタン
 #page-top {
 	position: fixed;
 	right: 40px;
-	bottom:140px;
+	bottom:120px;
 	z-index: 2;
 	opacity: 0;
 	transform: translateY(100px);
@@ -201,28 +201,20 @@ PagetopとLINEボタン
 
 #sns {
   position: fixed;
-  left: 10px;
-  bottom: 10px;
-  z-index: 1000;
+  right: 10px;
+  bottom: 5px;
+  z-index: 2;
   display: flex;
-  padding: 16px 0 0;
-}
-
-#sns .flex {
-  display: flex;
-  gap: 10px;
+  gap:10px;
 }
 
 /* 以下はline */
 #line a {
   display: block;
 	border-radius: 5px;
-	width: 160px;
-	height: 60px;
-	color: #fff;
+	width: 200px;
+	height: 90px;
 	text-align: center;
-	text-transform: uppercase; 
-	text-decoration: none;
 	font-size: 0.6rem;
 	transition: all 0.3s; /* アニメーションのスムーズさ */
 }
@@ -239,9 +231,6 @@ PagetopとLINEボタン
 }
 
 #line {
-	position: fixed;
-	right: 30px;
-	bottom: 0px;
 	z-index: 2;
 	opacity: 0;
 	transform: translateY(100px);
@@ -289,12 +278,9 @@ PagetopとLINEボタン
 #instagram a {
   display: block;
 	border-radius: 5px;
-	width: 160px;
-	height: 60px;
+	width: 200px;
+	height: 90px;
 	color: #fff;
-	text-align: center;
-	text-transform: uppercase; 
-	text-decoration: none;
 	font-size: 0.6rem;
 	transition: all 0.3s;
 }
@@ -311,9 +297,6 @@ PagetopとLINEボタン
 }
 
 #instagram {
-	position: fixed;
-	right: 30px;
-	bottom: 70px;
 	z-index: 2;
 	opacity: 0;
 	transform: translateY(100px);
@@ -363,7 +346,6 @@ PagetopとLINEボタン
   display: none;
   transition: all 0.3s;
 }
-
 
 /*-------------------------------------------
 メッセージ
@@ -516,6 +498,55 @@ PagetopとLINEボタン
   line-height: 3em;
   background-color: #FFFDEE;
   padding: 1.8rem 2.4rem;;
+}
+
+/*-------------------------------------------
+社員ごとのtable
+-------------------------------------------*/
+.custom-styled-table {
+	margin-top: 36px;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	background-color: #fff;
+  border-collapse: collapse;
+  }
+  
+  .custom-styled-table thead tr {
+	background-color:#E4F6F5;
+	text-align: center;
+	border-bottom: 1px solid #CFD7DE;
+  }
+  
+  .custom-styled-table th,
+  .custom-styled-table td {
+	width: 33%;
+	padding: 10px 13px;
+	position: relative;
+	border-bottom: 1px solid #CFD7DE;;
+  }
+  
+  .custom-styled-table td:nth-child(2)::after {
+	content: "▶︎";
+	position: absolute;
+	top: 50%;
+	right: 0; /* 線を消した位置に矢印を表示 */
+	transform: translateY(-50%);
+	font-size: 18px;
+	color: #93B69C;;
+  }
+  
+  /* 特定の列幅を指定 */
+.custom-styled-table th:first-child,
+.custom-styled-table td:first-child {
+  width: 25%; 
+}
+
+.custom-styled-table th:nth-child(2),
+.custom-styled-table td:nth-child(2),
+.custom-styled-table th:nth-child(3),
+.custom-styled-table td:nth-child(3) {
+  width: 37.5%;
 }
 
 /*-------------------------------------------
@@ -864,25 +895,61 @@ font-size: 0.8rem;
   font-size: 0.8rem;
 }
 
+/*-------------------------------------------
+スタッフの声
+-------------------------------------------*/
+
+	.custom-styled-table th,
+	.custom-styled-table td {
+	  font-size: 10px;
+	  padding: 8px 10px;
+	}
+
+.custom-styled-table th:first-child,
+.custom-styled-table td:first-child {
+  width: 33.3%; 
+}
+
+.custom-styled-table th:nth-child(2),
+.custom-styled-table td:nth-child(2),
+.custom-styled-table th:nth-child(3),
+.custom-styled-table td:nth-child(3) {
+  width: 33.3%;
+}
+  
+  .custom-styled-table td:nth-child(2)::after {
+	right: -5%; /* 線を消した位置に矢印を表示 */
+	font-size: 10px;
+  }
+
+ /*-------------------------------------------
+page-topやline等
+-------------------------------------------*/
 
 #page-top {
 	position: fixed;
 	right: 20px;
-	bottom:130px;
+	bottom:100px;
 }
 
+#sns {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  justify-content: space-around;
+  flex:1;
+  gap:0px
+  }
 
-#line {
-	position: fixed;
-	right: 8px;
-	bottom:5px;
-}
-
-#instagram {
-	position: fixed;
-	right: 8px;
-	bottom:65px;
-}
+#line a,
+#instagram a {
+    width: 98%;
+    height: auto;
+    padding:8px 1%;
+  }
 
 #money .line3{
   margin: 32px auto 0px auto;
